@@ -1,11 +1,16 @@
 package BlackJack;
-
+/*
+ * Clasa karta
+ */
 public class Card {
 
 	private int num;
 	private int sign;
 	private int value;
 	
+	/*
+	 * Konstruktor koji kreira kartu
+	 */
 	public Card ( int num){
 //		this.num = broj % 14 + broj/14;
 //		if ((broj % 14 + broj/14) >=10){
@@ -43,10 +48,22 @@ public class Card {
 		
 	}
 	
+	public Card (Card other){
+		this.num=other.num;
+		this.sign=other.sign;
+		this.value=other.value;
+	}
+	
+	/*
+	 * Getter koji vraca vrijednost karte
+	 */
 	public int getValue() {
 		return value;
 	}
 	
+	/*
+	 * Metoda to String varaca sve vrijednosti iz clase ispisane kao String
+	 */
 	public String toString(){
 		String str ="";
 		str += "Karta: " +this.num;
