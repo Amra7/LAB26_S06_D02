@@ -22,22 +22,23 @@ public class Hand {
     /*
      *  Metoda koja dodaje kartu
      */
-	public Card addCard(Card newCard) {   //ovaj dio ni sama ne znam kako sam napisala treba mi obajasnjenje
-		for ( int i=0; i<hand.length; i++){
-			hand[i] = new Card (newCard);
+	public void addCard(Card card) {   //ovaj dio ni sama ne znam kako sam napisala treba mi obajasnjenje
+//		for ( int i=0; i<hand.length; i++){
+			hand[counter] = card;
             counter++;	
-            if (newCard.getValue() == 11) {
+            if (card.getValue() == 11) {
     			numAces++;
-    		}
+ //   		}
 		}
 		
-		return newCard;
 	}
     
 	/*
 	 * Metoda koja vraca sumu karata u ruci
+	 * Ako je jedna od karata As i sauma je veca od 21 smanjuje se vrijednost sume za 10
+	 * Ako su je suma i dalje veca od 21 i dvije karte su As smanjuje se za jos 10
 	 */
-	public int getSum( Card newCard) {
+	public int getSum() {
 		int sum = 0;
 		for (int i = 0; i < hand.length; i++) {
 			sum += hand[i].getValue();
