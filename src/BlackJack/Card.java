@@ -8,17 +8,14 @@ public class Card {
 	private int sign;
 	private int value;
 	
-	/*
+	/**
 	 * Konstruktor koji kreira kartu
 	 */
 	public Card ( int num){
-//		this.num = broj % 14 + broj/14;
-//		if ((broj % 14 + broj/14) >=10){
-//    	this.num++;
-//		}
+
 		
 		this.num= num %13;
-		this.num++;
+		//this.num++;
 		
 		if( this.num == 1){
 			this.value = 11;
@@ -34,18 +31,9 @@ public class Card {
 		
 		this.sign=num/13;
 		
-		
-//		int z =num/14;
-//		if ( z == 0){
-//			this.sign = 'S';
-//		} else if ( z == 1){
-//			this.sign = 'P';
-//		} else if ( z == 2){
-//			this.sign = 'K';
-//		} else {
-//			this.sign = 'T';
-//		}
-		
+	/**
+	 * Konstruktor koji kopira jedan objekat u drugi
+	 */
 	}
 	
 	public Card (Card other){
@@ -54,14 +42,14 @@ public class Card {
 		this.value=other.value;
 	}
 	
-	/*
+	/**
 	 * Getter koji vraca vrijednost karte
 	 */
 	public int getValue() {
 		return value;
 	}
 	
-	/*
+	/**
 	 * Metoda to String varaca sve vrijednosti iz clase ispisane kao String
 	 */
 	public String toString(){

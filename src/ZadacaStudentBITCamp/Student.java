@@ -10,6 +10,11 @@ public class Student {
 	private String ime;
 	private String prezime;
 
+	public Student() {
+		this.ime = "ime";
+		this.prezime = "prezime";
+
+	}
 	public Student(String ime, String prezime) {
 		this.ime = ime;
 		this.prezime = prezime;
@@ -34,7 +39,7 @@ public class Student {
 
 	public String toString() {
 		String str = "";
-		str += ime + prezime;
+		str += ime + " "+prezime;
 		return str;
 	}
 

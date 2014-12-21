@@ -1,5 +1,5 @@
 package BlackJack;
-/*
+/**
  * Klasa Spil karata
  */
 public class Deck {
@@ -11,7 +11,7 @@ public class Deck {
 		return brojac;
 	}
  
-	/*
+	/**
 	 * Konstriktor koji kreira spil karata i mjesa karte
 	 */
 	public Deck() {
@@ -22,7 +22,7 @@ public class Deck {
 		suffleCards();
 	}
 	
-	/*
+	/**
 	 * Metoda to String varaca sve vrijednosti iz clase ispisane kao String
 	 */
 	public String toString(){
@@ -34,7 +34,7 @@ public class Deck {
 		return str;
 	}
 	
-	/*
+	/**
 	 * Metoda koja mjesa karte
 	 */
 	public void suffleCards (){
@@ -51,7 +51,7 @@ public class Deck {
 		}
 	}
 	
-	/*
+	/**
 	 * Metoda koja izvlaci naizmjenicno karte iz spila
 	 */
 
@@ -59,7 +59,7 @@ public class Deck {
 		return (int)(i+ Math.random()* cards.length);
 	}
 	
-	/*
+	/**
 	 * Metoda koja daje sljedecu kartu iz spila
 	 */
 	public Card getNext(){
