@@ -12,7 +12,7 @@ public class Hand {
 	 * Konstruktor koji kreira ruku
 	 */
 	public Hand() {
-		Card[] hand = {};
+		this.hand = new Card[0];
 		int counter = 0;
 		int numAces = 0;
 	}
@@ -27,7 +27,7 @@ public class Hand {
 			for( int i=0; i<hand.length; i++){
 			temp[i]=hand[i];
 		}		
-		temp[hand.length-1] = card;
+		temp[temp.length-1] = card;
 		hand=temp;
 		 if (card.getValue() == 11) {
     			numAces++;
@@ -45,7 +45,7 @@ public class Hand {
 		for (int i = 0; i < hand.length; i++) { // prolazi kroz cijeli niz i svaku put dodaje vrijednost vrijednost karte koja je psotavljena na hand[0]
 			sum += hand[i].getValue();
 			if (sum > 21 && numAces > 1) {
-				sum = sum - 10;
+				sum = sum - 10*numAces;
 //				if (sum > 21 && numAces > 1) {
 //					sum = sum - 10;
 //				}
@@ -66,7 +66,5 @@ public class Hand {
 		return str;
 	}
 
-	// public void clear(){
-	//
-	// }
+
 }
