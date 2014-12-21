@@ -13,17 +13,16 @@ public class Hand {
 	 */
 	public Hand() {
 		hand = new Card[counter];
-		// for (int i=0; i<hand.length; i++){
-		// hand[i]=new Card(i);
-		// }
 		int counter = 0;
 		int numAces = 0;
 	}
-    /*
+	
+    /**
      *  Metoda koja dodaje kartu
      */
 	public Card addCard(Card card) {  
 	//	int counter =0;
+		
 		Card [] temp = new Card[counter];
 		for ( int i=0; i<hand.length; i++){
 			hand[i] = card;
