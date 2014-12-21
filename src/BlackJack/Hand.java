@@ -23,14 +23,20 @@ public class Hand {
 	public Card addCard(Card card) {  
 	//	int counter =0;
 		
-		Card [] temp = new Card[counter];
-		for ( int i=0; i<hand.length; i++){
-			hand[i] = card;
-            if (card.getValue() == 11) {
-    			numAces++;
-    		}
-            counter++;	
-		}
+		hand[counter] = card;
+        counter++;	
+        if (card.getValue() == 11) {
+			numAces++;
+        }
+		
+//		Card [] temp = new Card[counter];
+//		for ( int i=0; i<hand.length; i++){
+//			hand[i] = card;
+//            if (card.getValue() == 11) {
+//    			numAces++;
+//    		}
+//            counter++;	
+//		}
 		
 		return card;
 	}
