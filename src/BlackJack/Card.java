@@ -11,10 +11,10 @@ public class Card {
 	/**
 	 * Konstruktor koji kreira kartu
 	 */
-	public Card ( int num){
+	public Card ( int broj){
 
 		
-		this.num= num %13;
+		this.num= broj %13;
 		//this.num++;
 		
 		if( this.num == 1){
